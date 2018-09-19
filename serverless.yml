@@ -1,0 +1,25 @@
+service: app
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+
+custom:
+  wsgi:
+    app: app.app
+    packRequirements: false
+    pythonBin: python
+  pythonRequirements:
+    dockerizePip: false
+
+provider:
+  name: aws
+  profile: mark-sainty
+  runtime: python3.6
+
+functions:
+  app:
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: ANY {proxy+}

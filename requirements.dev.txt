@@ -1,0 +1,7 @@
+# Local development dependencies go here
+-r requirements.txt
+
+zappa==0.46.2
+pylint==2.1.1
+pylint-flask==0.5
+pytest==3.8.0
