@@ -3,7 +3,6 @@ service: app
 plugins:
   - serverless-python-requirements
   - serverless-wsgi
-
 custom:
   wsgi:
     app: app.app
@@ -22,4 +21,3 @@ functions:
     handler: wsgi.handler
     events:
       - http: ANY /
-      - http: ANY {proxy+}

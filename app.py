@@ -2,16 +2,19 @@
 first-half-goals service app
 """
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=['http://localhost:3000'])
 
 @app.route('/')
-def get_fixtures():
+def handler():
     """
     Return a list of fixtures
     """
     return jsonify([
         {
+            'uuid': '1',
             'kickOff': '2018-01-27T10:00:00',
             'country': 'England',
             'league': 'PL',
@@ -28,6 +31,7 @@ def get_fixtures():
             'rating': 5,
         },
         {
+            'uuid': '2',
             'kickOff': '2018-02-27T10:00:00',
             'country': 'Scotland',
             'league': 'C',
