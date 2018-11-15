@@ -14,7 +14,7 @@ custom:
 provider:
   name: aws
   profile: mark-sainty
-  runtime: python3.6.6
+  runtime: python3.6
 
 functions:
   app:

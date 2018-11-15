@@ -1,5 +1,5 @@
 {
-    "dev": {
+    "production": {
         "app_function": "app.app",
         "profile_name": "mark-sainty",
         "project_name": "first-half-goal-api",

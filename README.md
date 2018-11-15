@@ -20,3 +20,6 @@ The back end for first-half-goal
 ## Development
 - To check linting `yarn lint`
 - To run tests `yarn test`
+
+## Deployment
+- Currently manual by running `yarn deploy`

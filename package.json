@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "NODE_ENV='dev' sls wsgi serve -p 5001 --stage dev",
     "lint": "pylint *.py",
-    "test": "pytest tests/test_*.py"
+    "test": "pytest tests/test_*.py",
+    "deploy": "sls deploy --stage production --region eu-west-1"
   },
   "keywords": [],
   "author": "",
