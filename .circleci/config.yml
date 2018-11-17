@@ -37,4 +37,4 @@ jobs:
       # deploy app
       - run:
           name: Deploy application
-          command: npm deploy
+          command: sls deploy --stage production --region eu-west-1
