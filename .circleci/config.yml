@@ -18,16 +18,17 @@ jobs:
 
       # this is slow. build a custom docker image and use that
       - run:
-          name: Install node and npm
+          name: Install node and npm and yarn
           command: |
             curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
             sudo apt-get install -y nodejs
             node --version && npm -v
+            npm install yarn
 
       - run:
           name: Install Serverless CLI and dependencies
           command: |
-            npm install
+            yarn
 
       - save_cache:
           paths:
@@ -37,4 +38,4 @@ jobs:
       # deploy app
       - run:
           name: Deploy application
-          command: sls deploy --stage production --region eu-west-1
+          command: yarn deploy
