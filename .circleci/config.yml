@@ -1,0 +1,40 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/python-ci
+
+    docker:
+      # specify the version you desire here
+      - image: circleci/python:3.6.6
+
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-node-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-node
+
+      # this is slow. build a custom docker image and use that
+      - run:
+          name: Install node and npm
+          command: |
+            curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            node --version && npm -v
+
+      - run:
+          name: Install Serverless CLI and dependencies
+          command: |
+            yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-node-{{ checksum "package.json" }}
+
+      # deploy app
+      - run:
+          name: Deploy application
+          command: yarn deploy
