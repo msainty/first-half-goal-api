@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Install Serverless CLI and dependencies
           command: |
-            yarn install
+            npm install
 
       - save_cache:
           paths:
@@ -37,4 +37,4 @@ jobs:
       # deploy app
       - run:
           name: Deploy application
-          command: yarn deploy
+          command: npm deploy
