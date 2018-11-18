@@ -13,7 +13,6 @@ custom:
 
 provider:
   name: aws
-  profile: mark-sainty
   runtime: python3.6
 
 functions:
