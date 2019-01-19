@@ -5,3 +5,4 @@ zappa==0.46.2
 pylint==2.1.1
 pylint-flask==0.5
 pytest==3.8.0
+awscli==1.16.92

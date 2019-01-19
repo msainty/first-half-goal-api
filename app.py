@@ -3,6 +3,13 @@ first-half-goals service app
 """
 from flask import Flask, jsonify
 from flask_cors import CORS
+import sentry_sdk
+from sentry_sdk.integrations.flask import FlaskIntegration
+
+sentry_sdk.init(
+    dsn="https://5d56dab2bcc046d1a45418b739fa4a26@sentry.io/1375111",
+    integrations=[FlaskIntegration()]
+)
 
 app = Flask(__name__)
 CORS(app, origins=['http://localhost:3000',
