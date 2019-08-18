@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "serverless": "^1.29.0",
-    "serverless-python-requirements": "^4.2.5",
-    "serverless-wsgi": "^1.4.9"
+    "serverless": "1.50.0",
+    "serverless-python-requirements": "5.0.0",
+    "serverless-wsgi": "1.7.3"
   },
   "scripts": {
     "dev": "NODE_ENV='dev' sls wsgi serve -p 5001 --stage dev",
