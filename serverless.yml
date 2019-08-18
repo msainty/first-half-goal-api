@@ -1,4 +1,4 @@
-service: app
+service: first-half-goal-api
 
 plugins:
   - serverless-python-requirements
