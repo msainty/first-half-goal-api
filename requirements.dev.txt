@@ -1,8 +1,8 @@
 # Local development dependencies go here
 -r requirements.txt
 
-zappa==0.46.2
-pylint==2.1.1
-pylint-flask==0.5
-pytest==3.8.0
-awscli==1.16.92
+zappa==0.51.0
+pylint==2.4.4
+pylint-flask==0.6
+pytest==5.4.1
+awscli==1.18.36
