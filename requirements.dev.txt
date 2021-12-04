@@ -2,7 +2,8 @@
 -r requirements.txt
 
 zappa==0.51.0
-pylint==2.4.4
+pylint==2.7.0
 pylint-flask==0.6
 pytest==5.4.1
 awscli==1.18.36
+rsa>=4.7 # not directly required, pinned by Snyk to avoid a vulnerability
