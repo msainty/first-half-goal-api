@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "serverless": "1.50.0",
+    "serverless": "1.55.0",
     "serverless-python-requirements": "5.0.0",
     "serverless-wsgi": "1.7.3"
   },
