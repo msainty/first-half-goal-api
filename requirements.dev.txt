@@ -6,3 +6,5 @@ pylint==2.4.4
 pylint-flask==0.6
 pytest==5.4.1
 awscli==1.18.36
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+wheel>=0.38.0 # not directly required, pinned by Snyk to avoid a vulnerability
