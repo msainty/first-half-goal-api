@@ -1,3 +1,4 @@
 Flask==1.1.2
 flask_cors==3.0.8
 sentry-sdk[flask]==0.14.3
+werkzeug>=3.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
